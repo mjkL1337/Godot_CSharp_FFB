@@ -10,4 +10,9 @@ The other alternative is [x-channel's custom engine build](https://github.com/x-
 - No custom engine build needed
 - Windows only (DirectInput)
 
+## What it does
+It's just slider from -1.0 to 1.0 that sends the value straight to the wheel as force.
+
+---
+
 Built and tested on 4.6.1.stable.mono.official
