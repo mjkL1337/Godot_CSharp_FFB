@@ -1,0 +1,130 @@
+[gd_scene format=3 uid="uid://d063cu0vwjrs3"]
+
+[ext_resource type="Script" uid="uid://78511226w1en" path="res://scripts/main.gd" id="1_o5qli"]
+
+[node name="main" type="Node" unique_id=2074131725]
+script = ExtResource("1_o5qli")
+
+[node name="window" type="ColorRect" parent="." unique_id=671447333]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.23031491, 0.23031494, 0.23031494, 1)
+
+[node name="panel" type="Panel" parent="window" unique_id=129978716]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -379.0
+offset_top = -133.0
+offset_right = 379.0
+offset_bottom = 133.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="constant" type="HSlider" parent="window/panel" unique_id=875113446]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -339.0
+offset_top = -28.0
+offset_right = 339.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 2
+min_value = -1.0
+max_value = 1.0
+step = 9.999999999999999e-05
+scrollable = false
+
+[node name="label" type="Label" parent="window/panel/constant" unique_id=1861045735]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -324.0
+offset_top = -31.5
+offset_right = 324.0
+offset_bottom = -8.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Constant Force"
+horizontal_alignment = 1
+
+[node name="value" type="Label" parent="window/panel/constant" unique_id=1226321946]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -324.0
+offset_top = 8.5
+offset_right = 324.0
+offset_bottom = 26.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 13
+text = "0.00"
+horizontal_alignment = 1
+
+[node name="raw" type="HScrollBar" parent="window/panel" unique_id=1642602511]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -339.0
+offset_top = 61.0
+offset_right = 339.0
+offset_bottom = 78.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+min_value = -1.0
+max_value = 1.0
+step = 9.999999999999999e-05
+
+[node name="label" type="Label" parent="window/panel/raw" unique_id=227349130]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -324.0
+offset_top = -31.5
+offset_right = 324.0
+offset_bottom = -8.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Wheel Position"
+horizontal_alignment = 1
+
+[node name="value" type="Label" parent="window/panel/raw" unique_id=755667194]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -324.0
+offset_top = 8.5
+offset_right = 324.0
+offset_bottom = 26.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 13
+text = "0.00"
+horizontal_alignment = 1
