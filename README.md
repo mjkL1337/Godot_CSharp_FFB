@@ -8,11 +8,13 @@ The other alternative is [x-channel's custom engine build](https://github.com/x-
 - Detects the first FFB device it finds automatically
 - Hot-plug support
 - No custom engine build needed
-- Windows only (DirectInput)
 
 ## What it does
 It's just slider from -1.0 to 1.0 that sends the value straight to the wheel as force.
 
+## Issues
+- If the game crashes (or if you close the game through the editor's stop button), the last force value will remain applied to the wheel forever until you relaunch the game (or another game with ffb).
+
 ---
 
-Built and tested on 4.6.1.stable.mono.official
+Built and tested on 4.6.2.stable.mono.official
