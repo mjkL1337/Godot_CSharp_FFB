@@ -6,17 +6,18 @@ extends Node
 @onready var force: CheckBox = $window/panel/hbox/force
 @onready var proportional: CheckBox = $window/panel/hbox/proportional
 
+const device_index: int = 0
+
 func _ready() -> void:
 	Input.joy_connection_changed.connect(_on_joy_connection_changed)
 
 func _physics_process(_delta) -> void:
-	
 	if force.button_pressed:
 		FFB.SetForce(constant.value)
 	elif proportional.button_pressed:
-		var p: float = constant.value - Input.get_joy_axis(0, JOY_AXIS_LEFT_X)
+		var p: float = constant.value - Input.get_joy_axis(device_index, JOY_AXIS_LEFT_X)
 		FFB.SetForce(p * 8.0)
-	raw.value = Input.get_joy_axis(0, JOY_AXIS_LEFT_X)
+	raw.value = Input.get_joy_axis(device_index, JOY_AXIS_LEFT_X)
 	constant_value.text = "%.3f" % constant.value
 	raw_value.text = "%.3f" % raw.value
 
