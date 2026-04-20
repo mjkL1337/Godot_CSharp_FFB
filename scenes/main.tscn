@@ -20,10 +20,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -379.0
-offset_top = -133.0
-offset_right = 379.0
-offset_bottom = 133.0
+offset_left = -469.0
+offset_top = -179.0
+offset_right = 469.0
+offset_bottom = 179.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -34,15 +34,15 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -339.0
+offset_left = -404.0
 offset_top = -28.0
-offset_right = 339.0
+offset_right = 404.0
 offset_bottom = -12.0
 grow_horizontal = 2
 grow_vertical = 2
 min_value = -1.0
 max_value = 1.0
-step = 9.999999999999999e-05
+step = 0.0001
 scrollable = false
 
 [node name="label" type="Label" parent="window/panel/constant" unique_id=1861045735]
@@ -85,16 +85,16 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -339.0
+offset_left = -401.0
 offset_top = 61.0
-offset_right = 339.0
+offset_right = 401.0
 offset_bottom = 78.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 min_value = -1.0
 max_value = 1.0
-step = 9.999999999999999e-05
+step = 0.0001
 
 [node name="label" type="Label" parent="window/panel/raw" unique_id=227349130]
 layout_mode = 1
@@ -128,3 +128,29 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 13
 text = "0.00"
 horizontal_alignment = 1
+
+[node name="hbox" type="HBoxContainer" parent="window/panel" unique_id=871427032]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -163.0
+offset_top = -107.0
+offset_right = 163.0
+offset_bottom = -67.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="force" type="CheckBox" parent="window/panel/hbox" unique_id=1997752615]
+layout_mode = 2
+button_pressed = true
+text = "Plain Force"
+
+[node name="proportional" type="CheckBox" parent="window/panel/hbox" unique_id=2112418329]
+layout_mode = 2
+text = "Proportional Controller"
+
+[connection signal="pressed" from="window/panel/hbox/force" to="." method="_on_force_pressed"]
+[connection signal="pressed" from="window/panel/hbox/proportional" to="." method="_on_proportional_pressed"]
